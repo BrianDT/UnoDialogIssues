@@ -3,3 +3,11 @@
 ################################################################################
 
 /.vs/DialogIssues
+/DialogIssues/DialogIssues.Droid/bin/Debug
+/DialogIssues/DialogIssues.Droid/obj
+/DialogIssues/DialogIssues.UWP/bin/x86/Debug
+/DialogIssues/DialogIssues.UWP/obj
+/DialogIssues/DialogIssues.Wasm/obj
+/DialogIssues/DialogIssues.iOS/bin/iPhone/Debug
+/DialogIssues/DialogIssues.iOS/obj
+/DialogIssues/DialogIssues.Wasm/bin/Debug/netstandard2.0
