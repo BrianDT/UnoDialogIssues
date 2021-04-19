@@ -23,7 +23,7 @@ namespace DialogIssues.Droid
     public class Application : Windows.UI.Xaml.NativeApplication
     {
         public Application(IntPtr javaReference, JniHandleOwnership transfer)
-            : base(new App(), javaReference, transfer)
+            : base(() => new App(), javaReference, transfer)
         {
             ConfigureUniversalImageLoader();
         }

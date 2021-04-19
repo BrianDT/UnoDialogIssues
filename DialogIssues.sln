@@ -23,6 +23,7 @@ Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		DialogIssues\DialogIssues.Shared\DialogIssues.Shared.projitems*{396c71f5-6acb-4795-9ed5-aed3d593d6be}*SharedItemsImports = 4
 		DialogIssues\DialogIssues.Shared\DialogIssues.Shared.projitems*{6279c845-92f8-4333-ab99-3d213163593c}*SharedItemsImports = 13
+		DialogIssues\DialogIssues.Shared\DialogIssues.Shared.projitems*{81ab67ab-f0c9-4ffd-a55b-451feaf48a95}*SharedItemsImports = 5
 		DialogIssues\DialogIssues.Shared\DialogIssues.Shared.projitems*{98ae58d2-cfaf-4ce8-9325-ae0044fdd1b4}*SharedItemsImports = 4
 		DialogIssues\DialogIssues.Shared\DialogIssues.Shared.projitems*{9c965421-956e-4bfa-b457-f37e7a260fa3}*SharedItemsImports = 4
 	EndGlobalSection
@@ -145,6 +146,7 @@ Global
 		{98AE58D2-CFAF-4CE8-9325-AE0044FDD1B4}.Debug|ARM.ActiveCfg = Debug|iPhone
 		{98AE58D2-CFAF-4CE8-9325-AE0044FDD1B4}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{98AE58D2-CFAF-4CE8-9325-AE0044FDD1B4}.Debug|iPhone.Build.0 = Debug|iPhone
+		{98AE58D2-CFAF-4CE8-9325-AE0044FDD1B4}.Debug|iPhone.Deploy.0 = Debug|iPhone
 		{98AE58D2-CFAF-4CE8-9325-AE0044FDD1B4}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
 		{98AE58D2-CFAF-4CE8-9325-AE0044FDD1B4}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
 		{98AE58D2-CFAF-4CE8-9325-AE0044FDD1B4}.Debug|x64.ActiveCfg = Debug|iPhone
