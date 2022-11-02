@@ -10,13 +10,13 @@ namespace DialogIssues.Shared
     using DialogIssues.Shared.Views;
     using Windows.Foundation;
     using Windows.Foundation.Collections;
-    using Windows.UI.Xaml;
+#if WINDOWS_UWP
     using Windows.UI.Xaml.Controls;
-    using Windows.UI.Xaml.Controls.Primitives;
-    using Windows.UI.Xaml.Data;
-    using Windows.UI.Xaml.Input;
-    using Windows.UI.Xaml.Media;
-    using Windows.UI.Xaml.Navigation;
+#else
+    using Microsoft.UI.Xaml.Controls;
+    using Microsoft.UI.Xaml;
+    using Windows.UI.Popups;
+#endif
 
     // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -51,7 +51,11 @@ namespace DialogIssues.Shared
                 Title = title,
                 Message = message
             };
-            ContentDialogResult result = await dialog.ShowAsync();
+#if NET6_0 && WINDOWS
+            dialog.XamlRoot = AppStateHelper.GetMainWindow().Content.XamlRoot;
+#endif
+
+            ContentDialogResult result = await dialog.ShowAsync(ContentDialogPlacement.Popup);
             if (result == ContentDialogResult.Primary)
             {
                 yesAction();

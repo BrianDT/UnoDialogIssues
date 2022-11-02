@@ -1,0 +1,8 @@
+   at Windows.UI.Popups.MessageDialog.ShowNativeAsync(CancellationToken )
+   at Windows.UI.Popups.MessageDialog.ShowInnerAsync(CancellationToken )
+   at Windows.UI.Popups.MessageDialog.<ShowAsync>b__2_0(CancellationToken )
+   at Windows.Foundation.AsyncOperation`1.<BuildTaskAsync>d__5[[Windows.UI.Popups.IUICommand, Uno, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null]].MoveNext()
+   at System.WindowsRuntimeSystemExtensions.<AsTaskCore>d__11`1[[Windows.UI.Popups.IUICommand, Uno, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null]].MoveNext()
+   at DialogIssues.MainPage.ShowMessageDialog(String message, Action yesAction, Action noAction, String title) in D:\Development\GitHub\UnoDialogIssues\DialogIssues\DialogIssues.Shared\MainPage.xaml.cs:line 72
+   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_0(Object )
+   at Foundation.NSAsyncSynchronizationContextDispat

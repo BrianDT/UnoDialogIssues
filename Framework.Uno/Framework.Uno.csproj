@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+	  <TargetFrameworks>net6.0;net6.0-android;net6.0-ios;net6.0-windows10.0.19041.0</TargetFrameworks>
+	  <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+	  <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+	  <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+	  <TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+	  <RootNamespace>Vssl.Samples.Framework</RootNamespace>
+	  <AssemblyName>Vssl.Samples.Framework.Uno</AssemblyName>
+	  <CodeAnalysisRuleSet>..\Vssl.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+	<PropertyGroup Condition="'$(TargetFramework)'=='net6.0'">
+		<DefineConstants>$(DefineConstants);__WASM__</DefineConstants>
+	</PropertyGroup>
+	<ItemGroup Condition="'$(TargetFramework)'!='net6.0-windows10.0.19041.0'">
+		<PackageReference Include="Uno.WinUI" Version="4.6.19" />
+	</ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)'=='net6.0-windows10.0.19041.0'">
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.1.5" />
+		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.755" />
+		<PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)'!='net6.0-windows10.0.19041.0'">
+		<Page Include="**\*.xaml" Exclude="bin\**\*.xaml;obj\**\*.xaml" />
+		<Compile Update="**\*.xaml.cs">
+		  <DependentUpon>%(Filename)</DependentUpon>
+		</Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <UpToDateCheckInput Include="**\*.xaml" Exclude="bin\**\*.xaml;obj\**\*.xaml" />
+  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\FrameworkInterfaces\FrameworkInterfaces.csproj" />
+	</ItemGroup>
+</Project>
