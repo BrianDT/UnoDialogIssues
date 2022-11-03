@@ -11,12 +11,13 @@ namespace DialogIssues.Shared
     using Windows.Foundation;
     using Windows.Foundation.Collections;
 #if WINDOWS_UWP
+    using Windows.UI.Xaml;
     using Windows.UI.Xaml.Controls;
 #else
-    using Microsoft.UI.Xaml.Controls;
     using Microsoft.UI.Xaml;
-    using Windows.UI.Popups;
+    using Microsoft.UI.Xaml.Controls;
 #endif
+    using Windows.UI.Popups;
 
     // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
